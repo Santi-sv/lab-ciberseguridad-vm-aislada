@@ -35,7 +35,7 @@ Se creó la cuenta local **UsuarioSeguro** como **Usuario estándar**, separada 
 
 *Figura 2a. "UsuarioSeguro" configurado como Usuario estándar (no administrador).*
 
-<img src="03-inicio-sesión.png" width="470">
+<img src="03-inicio-sesion.png" width="470">
 
 *Figura 2b. UsuarioSeguro (estándar) y Santi (administrador) como cuentas separadas del sistema.*
 
@@ -75,7 +75,7 @@ Con el sistema ya endurecido se creó un punto de restauración llamado **"Harde
 
 > *Aclaración: la consigna nombra este punto de dos formas —"Clean Install - Hardening applied" en el enunciado y "Hardening Inicial" en el listado de entregables—. Usé "Hardening Inicial" por ser el nombre indicado en el paso 6 del entregable.*
 
-<img src="07-instantánea-endurecimiento-inicial.png" width="600">
+<img src="07-snapshot-hardening-inicial.png" width="600">
 
 *Figura 6. Instantánea "Hardening Inicial" en la lista de máquinas de UTM.*
 
