@@ -17,7 +17,7 @@
 
 La máquina virtual se configuró en modo **NAT** (en UTM, "Red compartida") **antes** de encenderla por primera vez. En este modo la VM obtiene salida a internet a través del anfitrión, pero queda detrás de su NAT: no recibe una IP propia en la red física ni es visible como un dispositivo más de la LAN.
 
-<img src="capturas/01-red-nat.png" width="620">
+<img src="01-red-nat.png" width="620">
 
 *Figura 1. Modo de red "Red compartida" (equivalente a NAT) en la configuración de la VM.*
 
@@ -31,11 +31,11 @@ La máquina virtual se configuró en modo **NAT** (en UTM, "Red compartida") **a
 
 Se creó la cuenta local **UsuarioSeguro** como **Usuario estándar**, separada de la cuenta de administrador (**Santi**). Es el usuario para el trabajo diario. Si un malware se ejecuta bajo esta cuenta, no hereda permisos de administrador y no puede comprometer todo el sistema. La primera imagen confirma el tipo de cuenta; la segunda muestra ambas cuentas conviviendo por separado en el sistema.
 
-<img src="capturas/02-usuario-estandar.png" width="560">
+<img src="02-usuario-estandar.png" width="560">
 
 *Figura 2a. "UsuarioSeguro" configurado como Usuario estándar (no administrador).*
 
-<img src="capturas/03-inicio-sesion.png" width="470">
+<img src="03-inicio-sesión.png" width="470">
 
 *Figura 2b. UsuarioSeguro (estándar) y Santi (administrador) como cuentas separadas del sistema.*
 
@@ -43,7 +43,7 @@ Se creó la cuenta local **UsuarioSeguro** como **Usuario estándar**, separada 
 
 Se ejecutó **Windows Update** y se instalaron los parches disponibles hasta dejar el sistema al día: la pantalla muestra **"¡Todo está actualizado!"** y las actualizaciones (versión preliminar e inteligencia de seguridad de Microsoft Defender) en estado **Completado**. Mantener el sistema parcheado cierra las vulnerabilidades conocidas, que suelen explotarse a las pocas horas de hacerse públicas.
 
-<img src="capturas/04-windows-update.png" width="560">
+<img src="04-windows-update.png" width="560">
 
 *Figura 3. Windows Update: sistema al día ("¡Todo está actualizado!").*
 
@@ -55,7 +55,7 @@ Se ejecutó **Windows Update** y se instalaron los parches disponibles hasta dej
 
 Se creó un archivo con **touch** y se listaron sus permisos con **ls -l**. La salida **-rw-rw-r--** indica los permisos rwx (lectura/escritura/ejecución) para el usuario, el grupo y el resto. Comprender y limitar estos permisos es la base de la seguridad en Linux, evitando prácticas peligrosas como el **chmod 777**.
 
-<img src="capturas/05-permisos-ls-l.png" width="720">
+<img src="05-permisos-ls-l.png" width="720">
 
 *Figura 4. Permisos del archivo mostrados con ls -l.*
 
@@ -63,7 +63,7 @@ Se creó un archivo con **touch** y se listaron sus permisos con **ls -l**. La s
 
 El comando **sudo apt update** actualiza la lista de paquetes desde los repositorios oficiales y firmados de Ubuntu (detectó 174 paquetes actualizables). Instalar software únicamente desde fuentes oficiales —y no desde scripts o PPAs desconocidos— es clave para no comprometer el sistema. El uso de **sudo** aplica el menor privilegio también en Linux: se opera como usuario normal y se elevan permisos solo cuando es necesario.
 
-<img src="capturas/06-apt-update.png" width="580">
+<img src="06-apt-update.png" width="580">
 
 *Figura 5. sudo apt update sincronizando los repositorios oficiales de Ubuntu.*
 
@@ -75,7 +75,7 @@ Con el sistema ya endurecido se creó un punto de restauración llamado **"Harde
 
 > *Aclaración: la consigna nombra este punto de dos formas —"Clean Install - Hardening applied" en el enunciado y "Hardening Inicial" en el listado de entregables—. Usé "Hardening Inicial" por ser el nombre indicado en el paso 6 del entregable.*
 
-<img src="capturas/07-snapshot-hardening-inicial.png" width="600">
+<img src="07-instantánea-endurecimiento-inicial.png" width="600">
 
 *Figura 6. Instantánea "Hardening Inicial" en la lista de máquinas de UTM.*
 
